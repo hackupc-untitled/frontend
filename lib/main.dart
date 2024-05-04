@@ -2,13 +2,13 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get_mac_address/get_mac_address.dart';
-import 'package:gnss/Prefabs/CustomButton.dart';
-import 'package:gnss/WebService/WebService.dart';
+import 'package:gnss2/Prefabs/CustomButton.dart';
+import 'package:gnss2/WebService/WebService.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:raw_gnss/gnss_status_model.dart';
 import 'package:raw_gnss/raw_gnss.dart';
 import 'package:intl/intl.dart';
+import 'dart:io';
 
 void main() {
   runApp(MyApp());
@@ -40,13 +40,13 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   String _macAddress = '';
-  final _getMacAddressPlugin = GetMacAddress();
+  final _getMacAddressPlugin = '';
   var _hasPermissions = false;
   late RawGnss _gnss;
 
   @override
   void initState() {
-    initPlatformState();
+    initMac();
     super.initState();
 
     RawGnss().gnssMeasurementEvents.listen((e) {
@@ -76,8 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
           'snrInDb': element.snrInDb,
           'state': element.state,
           'svid': element.svid,
-          'timeOffsetNanos': element.timeOffsetNanos,
-          'string': element.string,
+          'timeOffsetNanos': element.timeOffsetNanos
         };
 
         data.forEach((key, value) {
@@ -135,26 +134,6 @@ class _HomeScreenState extends State<HomeScreen> {
         .then((value) => setState(() => _hasPermissions = value.isGranted));
   }
 
-  Future<void> initPlatformState() async {
-    String macAddress;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    // We also handle the message potentially returning null.
-    try {
-      macAddress = await _getMacAddressPlugin.getMacAddress() ?? '';
-    } on PlatformException {
-      macAddress = '';
-    }
-
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
-    if (!mounted) return;
-
-    setState(() {
-      _macAddress = macAddress;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -170,6 +149,8 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     ));
   }
+
+  void initMac() async {}
 
   String nowDate() {
     final DateTime now = DateTime.now();

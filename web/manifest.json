@@ -1,6 +1,6 @@
 {
-    "name": "gnss",
-    "short_name": "gnss",
+    "name": "gnss2",
+    "short_name": "gnss2",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

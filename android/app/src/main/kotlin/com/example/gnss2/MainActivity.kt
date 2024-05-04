@@ -1,4 +1,4 @@
-package com.example.gnss
+package com.example.gnss2
 
 import io.flutter.embedding.android.FlutterActivity
 
