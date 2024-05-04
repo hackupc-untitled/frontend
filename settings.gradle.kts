@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "hackupc-esa"
+rootProject.name = "Galileo Mastermind Boilerplate"
 include(":app")
  
