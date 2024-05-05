@@ -73,21 +73,3 @@ To run the GNSS Data Visualization App, you'll need:
 1. Launch the app on your mobile device or emulator.
 2. Explore the various features such as data display, interactive maps, and data filtering.
 3. Analyze GNSS data to gain insights and make informed decisions.
-
-## Contributors
-
-This project was developed by the talented team at [Your Team Name].
-
-- John Doe - Backend Developer
-- Jane Smith - Frontend Developer
-- Alex Johnson - GNSS Specialist
-
-## Support
-
-For any inquiries or support, please contact [your email address].
-
-## Acknowledgments
-
-We would like to express our gratitude to the European Space Agency (ESA) and Hackathon UPC for organizing the challenge and providing the opportunity to work on such an exciting project.
-
-Thank you for using our GNSS Data Visualization App! We hope you find it valuable and user-friendly.
