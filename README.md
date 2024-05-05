@@ -2,8 +2,6 @@
 
 Welcome to our GNSS Data Visualization App, built as a solution for the Hackathon UPC challenge defined by the European Space Agency (ESA). Our application aims to provide users with an intuitive and user-friendly interface to visualize data provided by the GNSS (Global Navigation Satellite System) library. The backend is powered by Flask, while the frontend is developed using Flutter.
 
-![App Icon](https://www.google.com/url?sa=i&url=https%3A%2F%2Fbrand.esa.int%2Fassets%2Fthe-esa-patch%2F&psig=AOvVaw2dFIcwRVIi6BTGJB35SgpT&ust=1714972475138000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjhhrvg9YUDFQAAAAAdAAAAABAE)
-
 ## Features
 
 - 🌐 **GNSS Data Display**: Our app fetches data from the GNSS library and displays it in an easy-to-understand format.
